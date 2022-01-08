@@ -1,0 +1,23 @@
+html,
+body {
+  font-family: cursive;
+  background: lightyellow;
+}
+h1 {
+  color: pink;
+}
+input[type="text"] {
+  font-family: cursive;
+  border: 2px solid black;
+}
+#app {
+  width: 400px;
+  height: 100vh;
+  margin: 20px auto;
+  display: block;
+}
+.todoBtn {
+  margin-left: 5px;
+  background: pink;
+  font-family: cursive;
+}

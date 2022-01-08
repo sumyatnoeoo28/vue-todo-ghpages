@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue3-todo-gh-pages</title>
+  <!-- add css file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Vue app will mounted into this Div -->
+  <div id="app">
+    <h1>Todo App</h1>
+  <button @click="showForm=!showForm" class="todoBtn">{{showForm ? 'Hide' : 'Show'}} Form </button>
+  <p>Todo Count: {{ todos.length }}</p>
+  <form v-if="showForm" @click.prevent="addItem()">
+    <input type="text" v-model='formInput'>
+    <button type="submit" class="todoBtn" :disabled="formInput.length === 0">Submit</button>
+  </form>
+  <p>Current: {{ formInput }}</p>
+  <ul>
+    <li v-for='(todo, index) in todos'>
+      <p>{{ index }}: {{ todo }}<button class="todoBtn" @click="deleteItem(index)">X</button></p>
+    </li>
+  </ul>
+  </div>
+  <!-- add Vue3 lib via CDN link -->
+  <script src="https://unpkg.com/vue@next"></script>
+  <!-- add app js file -->
+  <script src="app.js"></script>
+</body>
+</html>
