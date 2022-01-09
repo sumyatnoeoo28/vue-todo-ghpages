@@ -20,7 +20,7 @@
   </form>
   <p>Current: {{ formInput }}</p>
   <ul>
-    <li v-for='(todo, index) in todos'>
+    <li v-for="(todo, index) in todos" :key="index">
       <p>{{ index }}: {{ todo }}<button class="todoBtn" @click="deleteItem(index)">X</button></p>
     </li>
   </ul>
